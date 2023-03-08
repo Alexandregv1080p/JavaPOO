@@ -7,10 +7,10 @@ public class Classe1 {
     private void metodo1(){
 
     }
-    private void metodo2(){
+    protected void metodo2(){
 
     }
-    private void metodo3(){
+    public void metodo3(){
 
     }
 }
