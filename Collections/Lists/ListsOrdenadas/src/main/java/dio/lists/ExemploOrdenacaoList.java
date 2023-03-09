@@ -13,7 +13,7 @@ public class ExemploOrdenacaoList {
         System.out.println(meusGatos);
         System.out.println("--------------------------");
 
-        System.out.println("-Ordem de inserção-");
+        System.out.println("-Ordem randomizada-");
         Collections.shuffle(meusGatos); //randomiza a sequencia da lista
         System.out.println(meusGatos);
         System.out.println("--------------------------");
