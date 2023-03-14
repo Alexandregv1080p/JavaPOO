@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Collections/Set/ComecandoSet/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Collections/Map/ComecandoMap/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Collections/Streams/ReferenciaMetodo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TratamentoExec/Unchecked/src/main/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
