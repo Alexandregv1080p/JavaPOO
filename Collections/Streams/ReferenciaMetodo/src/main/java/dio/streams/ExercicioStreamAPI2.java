@@ -59,9 +59,14 @@ public class ExercicioStreamAPI2 {
                 .min();
         System.out.println(numMin);
 
+        System.out.println("Mostre os numeros repetidos na lista e suas quantidades ");
         long countNumerosUnicos = numerosAleatorios.stream()
                 .distinct()//o método distinc, retorna todos os numeros repetidos da stream
                 .count(); //retorna o numero total de elementos do List
+        List<Integer> numsRepetidos = numerosAleatorios2Integer.stream()
+                        .distinct()
+                        .collect(Collectors.toList());
+        System.out.println("Numeros repetidos : " + numsRepetidos);
         System.out.println("Retirando os números repetidos da lista, quantos números ficam? " + countNumerosUnicos);
 
         System.out.println("Mostre a lista na ordem númerica: ");

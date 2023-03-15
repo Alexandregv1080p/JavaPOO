@@ -1,11 +1,26 @@
 package dio.excepetions;
 
+import javax.swing.*;
 import java.io.*;
 
 public class CheckedException {
-    public static void main(String[] args) throws IOException {
-        String nomeDoArquivo = "romance-blake-crouch.txt";
-        imprimirArquivoNoConsole(nomeDoArquivo);
+    public static void main(String[] args) {
+        String nomeDoArquivo = "romanc-blake-crouch.txt";
+        try {
+            imprimirArquivoNoConsole(nomeDoArquivo);
+        }catch (FileNotFoundException e){ //excepetion caso o nome nao esteja certo ou n exista o arquivo
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"Revise o nome do arquivo que vc deseja imprimir " +
+                    "ERROR: " + e.getCause());
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro inesperado, " +
+                    "entre em contato com o suporte");
+
+        }finally {
+            System.out.println("Chegou no finally");
+        }
 
         System.out.println("Apesar da exception, o programa continua...");
     }
