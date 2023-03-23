@@ -6,6 +6,7 @@ public class ExemploSet {
     public static void main(String[] args) {
         System.out.println("Crie um conjunto de notas");
         Set<Double> notas = new HashSet<>(Arrays.asList(7d, 8.5, 9.3, 5d, 7d, 0d, 3.6));
+        Set<Integer> numrand = new HashSet<>(Arrays.asList(1,2,3,4,1,2,3));
         System.out.println(notas); //gera numeros aleatorios, se o numero for repetido, ele aparecera um vez só
         System.out.println("----------------------------");
 
@@ -93,6 +94,16 @@ public class ExemploSet {
         System.out.println("----------------------------");
 
         System.out.println("Confira se o conjunto esta vazio : " + notas3.isEmpty());
+
+        System.out.println("Mostre apenas os numeros que na foram repitidos : ");
+        for (Integer not : numrand) {
+            if(numrand.contains(not)){
+                numrand.remove(not);
+            }else{
+                numrand.add(not);
+            }
+        }
+        System.out.println(numrand);
     }
 
 

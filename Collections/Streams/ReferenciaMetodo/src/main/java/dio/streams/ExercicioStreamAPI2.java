@@ -63,20 +63,16 @@ public class ExercicioStreamAPI2 {
         long countNumerosUnicos = numerosAleatorios.stream()
                 .distinct()//o método distinc, retorna todos os numeros repetidos da stream
                 .count(); //retorna o numero total de elementos do List
-        List<Integer> numsRepetidos = numerosAleatorios2Integer.stream()
-                        .distinct()
-                        .collect(Collectors.toList());
-        System.out.println("Numeros repetidos : " + numsRepetidos);
         System.out.println("Retirando os números repetidos da lista, quantos números ficam? " + countNumerosUnicos);
 
         System.out.println("Mostre a lista na ordem númerica: ");
-        List<Integer> numerosOrdemNatural = (List)numerosAleatorios3Integer.stream()
+        List<Integer> numerosOrdemNatural = numerosAleatorios3Integer.stream()
                 .sorted(Comparator.naturalOrder())//converte para a ordem natural do list
                 .collect(Collectors.toList());
         System.out.println(numerosOrdemNatural);
 
         System.out.println("Agrupe os valores ímpares múltiplos de 3 ou de 5:");
-        Map<Boolean, List<Integer>> collectNumerosMultiplosDe3E5 = (Map)numerosAleatorios3Integer.stream()
+        Map<Boolean, List<Integer>> collectNumerosMultiplosDe3E5 = numerosAleatorios3Integer.stream()
                 .collect(Collectors.groupingBy((i) -> {
             return i % 3 == 0 || i % 5 == 0;
         }));
