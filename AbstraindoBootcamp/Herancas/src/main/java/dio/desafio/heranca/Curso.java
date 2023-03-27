@@ -1,29 +1,11 @@
 package dio.desafio.heranca;
 
-public class Curso {
-    private String titulo;
-    private String descricao;
+public class Curso extends Conteudo {
     private Integer cargaHoraria;
 
     public Curso(){
 
     }
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
     public Integer getCargaHoraria() {
         return cargaHoraria;
     }
@@ -31,16 +13,18 @@ public class Curso {
     public void setCargaHoraria(Integer cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
     }
-    public void calcularXp(){
-
-    }
 
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getTitulo() + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
                 '}';
+    }
+
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO * cargaHoraria;
     }
 }
